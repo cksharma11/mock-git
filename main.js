@@ -2,6 +2,10 @@ const shell = require("shelljs");
 
 const execCommand = (command, log) => {
   const commands = {
+    init: () => {
+      shell.exec(`mkdir .logs`);
+      console.log("initialized");
+    },
     log: () => {
       shell.exec(`tar -cf ./.logs/${log}.tar .`);
       console.log("Sucess");
