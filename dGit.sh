@@ -23,7 +23,8 @@ if [ $TASK = "commit" ]; then
 fi
 
 if [ $TASK = "logs" ]; then
-    ls "${LOG_FOLDER}"
+    echo -e "${GREEN}------commits------"
+    ls -t "${LOG_FOLDER}"
     echo -e "${GREEN}task executed ✔"
 fi
 
